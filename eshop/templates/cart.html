@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="music, song, track, price, DUBs, PRDK">
+    <meta name="author" content="hehe">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <link rel="shortcut icon" href="/static/image/prdk.png" />
+
+    <title>PRDK</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="/static/image/prdk.png" alt="PRDK Logo"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="parent-container">        
+            <div class="content">
+                <p>PRDK DUBSPACK vol.2</p>
+                <img src="/static/image/dub.jpg" style="width: 250px;">
+                <!-- Obsah produktu -->
+                <form action="/charge" method="POST">
+                    <!-- Skryté pole pro produkt a email -->
+                    <input type="hidden" name="product_id" value="{{ product[0] }}">
+                    <input type="hidden" name="email" value="{{ email }}">
+                    <p>2599 CZK</p>
+                    
+                    <!-- Skript pro Stripe Checkout -->
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="{{ key }}"
+                            data-amount="{{ product[2] }}"
+                            data-name="DUB Shop"
+                            data-description="{{ product[1] }}"
+                            data-email="{{ email }}"
+                            data-locale="auto">
+                    </script>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="music, song, track, price, DUBs, PRDK">
+    <meta name="author" content="hehe">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <link rel="shortcut icon" href="/static/image/prdk.png" />
+
+    <title>PRDK</title>
+</head>
+<body>
+    <!-- Header sekce -->
+    <header>
+        <div class="logo">
+            <a href="/"><img src="/static/image/prdk.png" ></a>
+        </div>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/cart">SHOP</a>
+                    <li><a href="https://www.patreon.com/prdkmusic" target="_blank" rel="noopener noreferrer">PATREON</a></li>
+                    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hlavní obsah stránky -->
+    <main class="parent-container">
+        <div class="content">
+          <div class="soc">
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/TqqKfD4EOec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <ul>
+              <li><a href="https://www.instagram.com/prdkmusic/"><img src="{{ url_for('static', filename='image/ig.png') }}" alt="Instagram"></a></li>
+              <li><a href="https://www.facebook.com/prdkofficial"><img src="{{ url_for('static', filename='image/fb.png') }}" alt="Facebook"></a></li>
+              <li><a href="https://open.spotify.com/artist/5zW02WwDZURs6ZjZark0Xu/"><img src="{{ url_for('static', filename='image/spotify.png') }}" alt="Spotify"></a></li>
+              <li><a href="https://soundcloud.com/prdkdnb"><img src="{{ url_for('static', filename='image/sc.png') }}" alt="Soundcloud"></a></li>
+            </ul>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer">Created by &copy; hehe</div>
+    </footer>
+
+</body>
+</html>
