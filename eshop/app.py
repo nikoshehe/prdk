@@ -17,11 +17,11 @@ stripe.api_key = stripe_keys['secret_key']
 
 # Konfigurace pro Flask-Mail
 app.config.update(
-    MAIL_SERVER='smtp.seznam.cz',   # email poskytovatele emalu (změnit na gmail)
+    MAIL_SERVER='',   
     MAIL_PORT=587,
     MAIL_USE_TLS=True,
-    MAIL_USERNAME='stalmi.99@seznam.cz', # Danuv email
-    MAIL_PASSWORD='733252539nS'
+    MAIL_USERNAME='', 
+    MAIL_PASSWORD=''
 )
 mail = Mail(app)
 
@@ -82,8 +82,8 @@ def send_confirmation_email(email):
 
 # Funkce pro odeslání emailu s produktem
 def send_product_email(email):
-    msg = Message('Your Product', sender='stalmi.99@seznam.cz', recipients=[email]) # změnit na danuv
-    msg.body = 'Here is the link to your product: https://drive.google.com/file/d/1PiByivLXhkBz65BH4l8slSKdF40eE9UC/view?pli=1'
+    msg = Message('Your Product', sender='', recipients=[email]) # změnit na danuv
+    msg.body = 'Here is the link to your product: '
     mail.send(msg)
 
 if __name__ == '__main__':
