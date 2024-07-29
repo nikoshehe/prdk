@@ -10,8 +10,8 @@ app.config['DEBUG'] = True
 
 
 stripe_keys = {
-    'secret_key': 'sk_test_51PaxFWRtUc623uMcmGrmY0XCLDtbNrRH3MJ9qvHtwK0ZT3bUWA1a6XZwyllBiMxODn1vc3qM6RJf5TxAfopOgxn000AFbVIT3R',
-    'publishable_key': 'pk_test_51PaxFWRtUc623uMcrc4vwofOAcDxK1tUTkbFyscKTfW5Ry4Io9tMqEzV1jNR0Rjlc1mMTsK1DIBoDNSgHHXj2fRf00C8Rs9Tqo',  # Zde by měl být váš veřejný klíč (publishable key)
+    'secret_key': '',
+    'publishable_key': '',  
 }
 stripe.api_key = stripe_keys['secret_key']
 
